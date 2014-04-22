@@ -6,8 +6,17 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8B04EE731906113800E43B21 /* ARMMutex.s in Sources */ = {isa = PBXBuildFile; fileRef = 8B04EE701906113800E43B21 /* ARMMutex.s */; };
+		8B04EE741906113800E43B21 /* charfreq.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B04EE711906113800E43B21 /* charfreq.h */; };
+		8B04EE751906113800E43B21 /* charfreq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B04EE721906113800E43B21 /* charfreq.c */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		8B04EE68190610CE00E43B21 /* libMostFrequentCharacter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMostFrequentCharacter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B04EE701906113800E43B21 /* ARMMutex.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = ARMMutex.s; sourceTree = "<group>"; };
+		8B04EE711906113800E43B21 /* charfreq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = charfreq.h; sourceTree = "<group>"; };
+		8B04EE721906113800E43B21 /* charfreq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = charfreq.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +33,7 @@
 		8B04EE5F190610CE00E43B21 = {
 			isa = PBXGroup;
 			children = (
+				8B04EE6F1906112300E43B21 /* MFC */,
 				8B04EE69190610CE00E43B21 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -36,6 +46,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8B04EE6F1906112300E43B21 /* MFC */ = {
+			isa = PBXGroup;
+			children = (
+				8B04EE701906113800E43B21 /* ARMMutex.s */,
+				8B04EE711906113800E43B21 /* charfreq.h */,
+				8B04EE721906113800E43B21 /* charfreq.c */,
+			);
+			name = MFC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -43,6 +63,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B04EE741906113800E43B21 /* charfreq.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +118,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B04EE731906113800E43B21 /* ARMMutex.s in Sources */,
+				8B04EE751906113800E43B21 /* charfreq.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,16 +199,28 @@
 		8B04EE6D190610CE00E43B21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
 		8B04EE6E190610CE00E43B21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
