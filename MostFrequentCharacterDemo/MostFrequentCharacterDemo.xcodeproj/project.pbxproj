@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B04EEC0190614C500E43B21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B04EEBF190614C500E43B21 /* Foundation.framework */; };
+		8B04EEC2190614C500E43B21 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B04EEC1190614C500E43B21 /* CoreGraphics.framework */; };
+		8B04EEC4190614C500E43B21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B04EEC3190614C500E43B21 /* UIKit.framework */; };
+		8B04EECA190614C500E43B21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B04EEC8190614C500E43B21 /* InfoPlist.strings */; };
+		8B04EECC190614C500E43B21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04EECB190614C500E43B21 /* main.m */; };
+		8B04EED0190614C500E43B21 /* YTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04EECF190614C500E43B21 /* YTAppDelegate.m */; };
+		8B04EED9190614C500E43B21 /* YTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04EED8190614C500E43B21 /* YTViewController.m */; };
+		8B04EEDB190614C500E43B21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B04EEDA190614C500E43B21 /* Images.xcassets */; };
+		8B04EEE2190614C500E43B21 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B04EEE1190614C500E43B21 /* XCTest.framework */; };
+		8B04EEE3190614C500E43B21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B04EEBF190614C500E43B21 /* Foundation.framework */; };
+		8B04EEE4190614C500E43B21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B04EEC3190614C500E43B21 /* UIKit.framework */; };
+		8B04EEEC190614C500E43B21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B04EEEA190614C500E43B21 /* InfoPlist.strings */; };
+		8B04EEEE190614C500E43B21 /* MostFrequentCharacterDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04EEED190614C500E43B21 /* MostFrequentCharacterDemoTests.m */; };
+		8B04EEF8190615F400E43B21 /* YTViewControllerIPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B04EEF7190615F400E43B21 /* YTViewControllerIPhone.xib */; };
+		8B04EF011906185900E43B21 /* YTViewControllerIPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B04EF001906185900E43B21 /* YTViewControllerIPad.xib */; };
+		8B04EF0319061A1700E43B21 /* libMostFrequentCharacter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B04EF0219061A1700E43B21 /* libMostFrequentCharacter.a */; };
+		8B3AF0491906231E008584A3 /* WindowIPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B3AF0481906231E008584A3 /* WindowIPad.xib */; };
+		8B3AF04B1906244D008584A3 /* WindowIPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B3AF04A1906244D008584A3 /* WindowIPhone.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B04EEE5190614C500E43B21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B04EEB4190614C500E43B21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B04EEBB190614C500E43B21;
+			remoteInfo = MostFrequentCharacterDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8B04EEBC190614C500E43B21 /* MostFrequentCharacterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MostFrequentCharacterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B04EEBF190614C500E43B21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8B04EEC1190614C500E43B21 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8B04EEC3190614C500E43B21 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8B04EEC7190614C500E43B21 /* MostFrequentCharacterDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MostFrequentCharacterDemo-Info.plist"; sourceTree = "<group>"; };
+		8B04EEC9190614C500E43B21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8B04EECB190614C500E43B21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B04EECD190614C500E43B21 /* MostFrequentCharacterDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MostFrequentCharacterDemo-Prefix.pch"; sourceTree = "<group>"; };
+		8B04EECE190614C500E43B21 /* YTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTAppDelegate.h; sourceTree = "<group>"; };
+		8B04EECF190614C500E43B21 /* YTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTAppDelegate.m; sourceTree = "<group>"; };
+		8B04EED7190614C500E43B21 /* YTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTViewController.h; sourceTree = "<group>"; };
+		8B04EED8190614C500E43B21 /* YTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTViewController.m; sourceTree = "<group>"; };
+		8B04EEDA190614C500E43B21 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8B04EEE0190614C500E43B21 /* MostFrequentCharacterDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MostFrequentCharacterDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B04EEE1190614C500E43B21 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8B04EEE9190614C500E43B21 /* MostFrequentCharacterDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MostFrequentCharacterDemoTests-Info.plist"; sourceTree = "<group>"; };
+		8B04EEEB190614C500E43B21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8B04EEED190614C500E43B21 /* MostFrequentCharacterDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MostFrequentCharacterDemoTests.m; sourceTree = "<group>"; };
+		8B04EEF7190615F400E43B21 /* YTViewControllerIPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YTViewControllerIPhone.xib; sourceTree = "<group>"; };
+		8B04EF001906185900E43B21 /* YTViewControllerIPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YTViewControllerIPad.xib; sourceTree = "<group>"; };
+		8B04EF0219061A1700E43B21 /* libMostFrequentCharacter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMostFrequentCharacter.a; path = "../build/Release-iphoneos/libMostFrequentCharacter.a"; sourceTree = "<group>"; };
+		8B3AF0481906231E008584A3 /* WindowIPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindowIPad.xib; sourceTree = "<group>"; };
+		8B3AF04A1906244D008584A3 /* WindowIPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindowIPhone.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B04EEB9190614C500E43B21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B04EF0319061A1700E43B21 /* libMostFrequentCharacter.a in Frameworks */,
+				8B04EEC2190614C500E43B21 /* CoreGraphics.framework in Frameworks */,
+				8B04EEC4190614C500E43B21 /* UIKit.framework in Frameworks */,
+				8B04EEC0190614C500E43B21 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B04EEDD190614C500E43B21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B04EEE2190614C500E43B21 /* XCTest.framework in Frameworks */,
+				8B04EEE4190614C500E43B21 /* UIKit.framework in Frameworks */,
+				8B04EEE3190614C500E43B21 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B04EEB3190614C500E43B21 = {
+			isa = PBXGroup;
+			children = (
+				8B04EEC5190614C500E43B21 /* MostFrequentCharacterDemo */,
+				8B04EEE7190614C500E43B21 /* MostFrequentCharacterDemoTests */,
+				8B04EEBE190614C500E43B21 /* Frameworks */,
+				8B04EEBD190614C500E43B21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B04EEBD190614C500E43B21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B04EEBC190614C500E43B21 /* MostFrequentCharacterDemo.app */,
+				8B04EEE0190614C500E43B21 /* MostFrequentCharacterDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B04EEBE190614C500E43B21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B04EF0219061A1700E43B21 /* libMostFrequentCharacter.a */,
+				8B04EEBF190614C500E43B21 /* Foundation.framework */,
+				8B04EEC1190614C500E43B21 /* CoreGraphics.framework */,
+				8B04EEC3190614C500E43B21 /* UIKit.framework */,
+				8B04EEE1190614C500E43B21 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B04EEC5190614C500E43B21 /* MostFrequentCharacterDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8B04EEF9190615FC00E43B21 /* Nibs */,
+				8B04EECE190614C500E43B21 /* YTAppDelegate.h */,
+				8B04EECF190614C500E43B21 /* YTAppDelegate.m */,
+				8B04EED7190614C500E43B21 /* YTViewController.h */,
+				8B04EED8190614C500E43B21 /* YTViewController.m */,
+				8B04EEDA190614C500E43B21 /* Images.xcassets */,
+				8B04EEC6190614C500E43B21 /* Supporting Files */,
+			);
+			path = MostFrequentCharacterDemo;
+			sourceTree = "<group>";
+		};
+		8B04EEC6190614C500E43B21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B04EEC7190614C500E43B21 /* MostFrequentCharacterDemo-Info.plist */,
+				8B04EEC8190614C500E43B21 /* InfoPlist.strings */,
+				8B04EECB190614C500E43B21 /* main.m */,
+				8B04EECD190614C500E43B21 /* MostFrequentCharacterDemo-Prefix.pch */,
+				8B3AF0481906231E008584A3 /* WindowIPad.xib */,
+				8B3AF04A1906244D008584A3 /* WindowIPhone.xib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B04EEE7190614C500E43B21 /* MostFrequentCharacterDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B04EEED190614C500E43B21 /* MostFrequentCharacterDemoTests.m */,
+				8B04EEE8190614C500E43B21 /* Supporting Files */,
+			);
+			path = MostFrequentCharacterDemoTests;
+			sourceTree = "<group>";
+		};
+		8B04EEE8190614C500E43B21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B04EEE9190614C500E43B21 /* MostFrequentCharacterDemoTests-Info.plist */,
+				8B04EEEA190614C500E43B21 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B04EEF9190615FC00E43B21 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				8B04EEF7190615F400E43B21 /* YTViewControllerIPhone.xib */,
+				8B04EF001906185900E43B21 /* YTViewControllerIPad.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B04EEBB190614C500E43B21 /* MostFrequentCharacterDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B04EEF1190614C500E43B21 /* Build configuration list for PBXNativeTarget "MostFrequentCharacterDemo" */;
+			buildPhases = (
+				8B04EEB8190614C500E43B21 /* Sources */,
+				8B04EEB9190614C500E43B21 /* Frameworks */,
+				8B04EEBA190614C500E43B21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MostFrequentCharacterDemo;
+			productName = MostFrequentCharacterDemo;
+			productReference = 8B04EEBC190614C500E43B21 /* MostFrequentCharacterDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B04EEDF190614C500E43B21 /* MostFrequentCharacterDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B04EEF4190614C500E43B21 /* Build configuration list for PBXNativeTarget "MostFrequentCharacterDemoTests" */;
+			buildPhases = (
+				8B04EEDC190614C500E43B21 /* Sources */,
+				8B04EEDD190614C500E43B21 /* Frameworks */,
+				8B04EEDE190614C500E43B21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B04EEE6190614C500E43B21 /* PBXTargetDependency */,
+			);
+			name = MostFrequentCharacterDemoTests;
+			productName = MostFrequentCharacterDemoTests;
+			productReference = 8B04EEE0190614C500E43B21 /* MostFrequentCharacterDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B04EEB4190614C500E43B21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YT;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Rinat Enikeev";
+				TargetAttributes = {
+					8B04EEBB190614C500E43B21 = {
+						DevelopmentTeam = 5V5EUT3ZXJ;
+					};
+					8B04EEDF190614C500E43B21 = {
+						TestTargetID = 8B04EEBB190614C500E43B21;
+					};
+				};
+			};
+			buildConfigurationList = 8B04EEB7190614C500E43B21 /* Build configuration list for PBXProject "MostFrequentCharacterDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B04EEB3190614C500E43B21;
+			productRefGroup = 8B04EEBD190614C500E43B21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B04EEBB190614C500E43B21 /* MostFrequentCharacterDemo */,
+				8B04EEDF190614C500E43B21 /* MostFrequentCharacterDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B04EEBA190614C500E43B21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B04EF011906185900E43B21 /* YTViewControllerIPad.xib in Resources */,
+				8B04EEDB190614C500E43B21 /* Images.xcassets in Resources */,
+				8B04EEF8190615F400E43B21 /* YTViewControllerIPhone.xib in Resources */,
+				8B3AF0491906231E008584A3 /* WindowIPad.xib in Resources */,
+				8B04EECA190614C500E43B21 /* InfoPlist.strings in Resources */,
+				8B3AF04B1906244D008584A3 /* WindowIPhone.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B04EEDE190614C500E43B21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B04EEEC190614C500E43B21 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B04EEB8190614C500E43B21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B04EED9190614C500E43B21 /* YTViewController.m in Sources */,
+				8B04EECC190614C500E43B21 /* main.m in Sources */,
+				8B04EED0190614C500E43B21 /* YTAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B04EEDC190614C500E43B21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B04EEEE190614C500E43B21 /* MostFrequentCharacterDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B04EEE6190614C500E43B21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B04EEBB190614C500E43B21 /* MostFrequentCharacterDemo */;
+			targetProxy = 8B04EEE5190614C500E43B21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8B04EEC8190614C500E43B21 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B04EEC9190614C500E43B21 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8B04EEEA190614C500E43B21 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B04EEEB190614C500E43B21 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B04EEEF190614C500E43B21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B04EEF0190614C500E43B21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B04EEF2190614C500E43B21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MostFrequentCharacterDemo/MostFrequentCharacterDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../,
+				);
+				INFOPLIST_FILE = "MostFrequentCharacterDemo/MostFrequentCharacterDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/developer/AppcodeProjects/MostFrequentCharacter/build/Release-iphoneos",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8B04EEF3190614C500E43B21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MostFrequentCharacterDemo/MostFrequentCharacterDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../,
+				);
+				INFOPLIST_FILE = "MostFrequentCharacterDemo/MostFrequentCharacterDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/developer/AppcodeProjects/MostFrequentCharacter/build/Release-iphoneos",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8B04EEF5190614C500E43B21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MostFrequentCharacterDemo.app/MostFrequentCharacterDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MostFrequentCharacterDemo/MostFrequentCharacterDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MostFrequentCharacterDemoTests/MostFrequentCharacterDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8B04EEF6190614C500E43B21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MostFrequentCharacterDemo.app/MostFrequentCharacterDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MostFrequentCharacterDemo/MostFrequentCharacterDemo-Prefix.pch";
+				INFOPLIST_FILE = "MostFrequentCharacterDemoTests/MostFrequentCharacterDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B04EEB7190614C500E43B21 /* Build configuration list for PBXProject "MostFrequentCharacterDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B04EEEF190614C500E43B21 /* Debug */,
+				8B04EEF0190614C500E43B21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B04EEF1190614C500E43B21 /* Build configuration list for PBXNativeTarget "MostFrequentCharacterDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B04EEF2190614C500E43B21 /* Debug */,
+				8B04EEF3190614C500E43B21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B04EEF4190614C500E43B21 /* Build configuration list for PBXNativeTarget "MostFrequentCharacterDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B04EEF5190614C500E43B21 /* Debug */,
+				8B04EEF6190614C500E43B21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B04EEB4190614C500E43B21 /* Project object */;
+}
