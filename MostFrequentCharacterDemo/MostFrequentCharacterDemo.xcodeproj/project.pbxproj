@@ -13,7 +13,7 @@
 		8B04EECA190614C500E43B21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B04EEC8190614C500E43B21 /* InfoPlist.strings */; };
 		8B04EECC190614C500E43B21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04EECB190614C500E43B21 /* main.m */; };
 		8B04EED0190614C500E43B21 /* YTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04EECF190614C500E43B21 /* YTAppDelegate.m */; };
-		8B04EED9190614C500E43B21 /* YTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04EED8190614C500E43B21 /* YTViewController.m */; };
+		8B04EED9190614C500E43B21 /* YTProfilerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04EED8190614C500E43B21 /* YTProfilerViewController.m */; };
 		8B04EEDB190614C500E43B21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B04EEDA190614C500E43B21 /* Images.xcassets */; };
 		8B04EEE2190614C500E43B21 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B04EEE1190614C500E43B21 /* XCTest.framework */; };
 		8B04EEE3190614C500E43B21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B04EEBF190614C500E43B21 /* Foundation.framework */; };
@@ -23,8 +23,15 @@
 		8B04EEF8190615F400E43B21 /* YTViewControllerIPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B04EEF7190615F400E43B21 /* YTViewControllerIPhone.xib */; };
 		8B04EF011906185900E43B21 /* YTViewControllerIPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B04EF001906185900E43B21 /* YTViewControllerIPad.xib */; };
 		8B04EF0319061A1700E43B21 /* libMostFrequentCharacter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B04EF0219061A1700E43B21 /* libMostFrequentCharacter.a */; };
-		8B3AF0491906231E008584A3 /* WindowIPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B3AF0481906231E008584A3 /* WindowIPad.xib */; };
 		8B3AF04B1906244D008584A3 /* WindowIPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B3AF04A1906244D008584A3 /* WindowIPhone.xib */; };
+		8B425B451907DED4003679CE /* RealTimePlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B425B441907DED4003679CE /* RealTimePlot.m */; };
+		8B425B5E190804EE003679CE /* YTMFCOptmThrdCountOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B425B5D190804EE003679CE /* YTMFCOptmThrdCountOperation.m */; };
+		8B425B63190819D8003679CE /* WindowIPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B425B62190819D8003679CE /* WindowIPad.xib */; };
+		8B425B6819082E40003679CE /* YTMFCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B425B6719082E40003679CE /* YTMFCOperation.m */; };
+		8B425B6E19083FCA003679CE /* YTMFCTimeOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B425B6D19083FCA003679CE /* YTMFCTimeOperation.m */; };
+		8B99F70719063DB0002AF5FE /* PlotItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B99F70419063DB0002AF5FE /* PlotItem.m */; };
+		8B99F70A19063EDE002AF5FE /* CorePlotLicense in Resources */ = {isa = PBXBuildFile; fileRef = 8B99F70919063EDE002AF5FE /* CorePlotLicense */; };
+		D827492A422D4284B4EB1105 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A16E917F6EB4A6984F941DF /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A16E917F6EB4A6984F941DF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		52753F9BD37C487FB01ED33D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8B04EEBC190614C500E43B21 /* MostFrequentCharacterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MostFrequentCharacterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B04EEBF190614C500E43B21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8B04EEC1190614C500E43B21 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,8 +57,8 @@
 		8B04EECD190614C500E43B21 /* MostFrequentCharacterDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MostFrequentCharacterDemo-Prefix.pch"; sourceTree = "<group>"; };
 		8B04EECE190614C500E43B21 /* YTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTAppDelegate.h; sourceTree = "<group>"; };
 		8B04EECF190614C500E43B21 /* YTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTAppDelegate.m; sourceTree = "<group>"; };
-		8B04EED7190614C500E43B21 /* YTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTViewController.h; sourceTree = "<group>"; };
-		8B04EED8190614C500E43B21 /* YTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTViewController.m; sourceTree = "<group>"; };
+		8B04EED7190614C500E43B21 /* YTProfilerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTProfilerViewController.h; sourceTree = "<group>"; };
+		8B04EED8190614C500E43B21 /* YTProfilerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTProfilerViewController.m; sourceTree = "<group>"; };
 		8B04EEDA190614C500E43B21 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8B04EEE0190614C500E43B21 /* MostFrequentCharacterDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MostFrequentCharacterDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B04EEE1190614C500E43B21 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -59,8 +68,21 @@
 		8B04EEF7190615F400E43B21 /* YTViewControllerIPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YTViewControllerIPhone.xib; sourceTree = "<group>"; };
 		8B04EF001906185900E43B21 /* YTViewControllerIPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YTViewControllerIPad.xib; sourceTree = "<group>"; };
 		8B04EF0219061A1700E43B21 /* libMostFrequentCharacter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMostFrequentCharacter.a; path = "../build/Release-iphoneos/libMostFrequentCharacter.a"; sourceTree = "<group>"; };
-		8B3AF0481906231E008584A3 /* WindowIPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindowIPad.xib; sourceTree = "<group>"; };
 		8B3AF04A1906244D008584A3 /* WindowIPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindowIPhone.xib; sourceTree = "<group>"; };
+		8B425B431907DED4003679CE /* RealTimePlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimePlot.h; sourceTree = "<group>"; };
+		8B425B441907DED4003679CE /* RealTimePlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTimePlot.m; sourceTree = "<group>"; };
+		8B425B5C190804EE003679CE /* YTMFCOptmThrdCountOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTMFCOptmThrdCountOperation.h; sourceTree = "<group>"; };
+		8B425B5D190804EE003679CE /* YTMFCOptmThrdCountOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTMFCOptmThrdCountOperation.m; sourceTree = "<group>"; };
+		8B425B5F1908055C003679CE /* YTProfileOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTProfileOperation.h; sourceTree = "<group>"; };
+		8B425B62190819D8003679CE /* WindowIPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindowIPad.xib; sourceTree = "<group>"; };
+		8B425B6419082BC9003679CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8B425B6619082E40003679CE /* YTMFCOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTMFCOperation.h; sourceTree = "<group>"; };
+		8B425B6719082E40003679CE /* YTMFCOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTMFCOperation.m; sourceTree = "<group>"; };
+		8B425B6C19083FCA003679CE /* YTMFCTimeOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTMFCTimeOperation.h; sourceTree = "<group>"; };
+		8B425B6D19083FCA003679CE /* YTMFCTimeOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTMFCTimeOperation.m; sourceTree = "<group>"; };
+		8B99F70319063DB0002AF5FE /* PlotItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlotItem.h; sourceTree = "<group>"; };
+		8B99F70419063DB0002AF5FE /* PlotItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlotItem.m; sourceTree = "<group>"; };
+		8B99F70919063EDE002AF5FE /* CorePlotLicense */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CorePlotLicense; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +94,7 @@
 				8B04EEC2190614C500E43B21 /* CoreGraphics.framework in Frameworks */,
 				8B04EEC4190614C500E43B21 /* UIKit.framework in Frameworks */,
 				8B04EEC0190614C500E43B21 /* Foundation.framework in Frameworks */,
+				D827492A422D4284B4EB1105 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +118,7 @@
 				8B04EEE7190614C500E43B21 /* MostFrequentCharacterDemoTests */,
 				8B04EEBE190614C500E43B21 /* Frameworks */,
 				8B04EEBD190614C500E43B21 /* Products */,
+				52753F9BD37C487FB01ED33D /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,11 +134,13 @@
 		8B04EEBE190614C500E43B21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B425B6419082BC9003679CE /* QuartzCore.framework */,
 				8B04EF0219061A1700E43B21 /* libMostFrequentCharacter.a */,
 				8B04EEBF190614C500E43B21 /* Foundation.framework */,
 				8B04EEC1190614C500E43B21 /* CoreGraphics.framework */,
 				8B04EEC3190614C500E43B21 /* UIKit.framework */,
 				8B04EEE1190614C500E43B21 /* XCTest.framework */,
+				4A16E917F6EB4A6984F941DF /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,11 +148,14 @@
 		8B04EEC5190614C500E43B21 /* MostFrequentCharacterDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8B425B6F19084D37003679CE /* Constants */,
+				8B425B5B1908043A003679CE /* Operations */,
+				8B99F70219063D94002AF5FE /* Plot */,
 				8B04EEF9190615FC00E43B21 /* Nibs */,
 				8B04EECE190614C500E43B21 /* YTAppDelegate.h */,
 				8B04EECF190614C500E43B21 /* YTAppDelegate.m */,
-				8B04EED7190614C500E43B21 /* YTViewController.h */,
-				8B04EED8190614C500E43B21 /* YTViewController.m */,
+				8B04EED7190614C500E43B21 /* YTProfilerViewController.h */,
+				8B04EED8190614C500E43B21 /* YTProfilerViewController.m */,
 				8B04EEDA190614C500E43B21 /* Images.xcassets */,
 				8B04EEC6190614C500E43B21 /* Supporting Files */,
 			);
@@ -136,11 +165,11 @@
 		8B04EEC6190614C500E43B21 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8B425B62190819D8003679CE /* WindowIPad.xib */,
 				8B04EEC7190614C500E43B21 /* MostFrequentCharacterDemo-Info.plist */,
 				8B04EEC8190614C500E43B21 /* InfoPlist.strings */,
 				8B04EECB190614C500E43B21 /* main.m */,
 				8B04EECD190614C500E43B21 /* MostFrequentCharacterDemo-Prefix.pch */,
-				8B3AF0481906231E008584A3 /* WindowIPad.xib */,
 				8B3AF04A1906244D008584A3 /* WindowIPhone.xib */,
 			);
 			name = "Supporting Files";
@@ -173,6 +202,63 @@
 			name = Nibs;
 			sourceTree = "<group>";
 		};
+		8B425B5B1908043A003679CE /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8B425B5F1908055C003679CE /* YTProfileOperation.h */,
+				8B425B6B19083D23003679CE /* MostFrequentCharacter */,
+			);
+			name = Operations;
+			sourceTree = "<group>";
+		};
+		8B425B6919082E45003679CE /* MFCOptimalThreadCount */ = {
+			isa = PBXGroup;
+			children = (
+				8B425B5C190804EE003679CE /* YTMFCOptmThrdCountOperation.h */,
+				8B425B5D190804EE003679CE /* YTMFCOptmThrdCountOperation.m */,
+			);
+			name = MFCOptimalThreadCount;
+			sourceTree = "<group>";
+		};
+		8B425B6A19082E53003679CE /* MFCTime */ = {
+			isa = PBXGroup;
+			children = (
+				8B425B6C19083FCA003679CE /* YTMFCTimeOperation.h */,
+				8B425B6D19083FCA003679CE /* YTMFCTimeOperation.m */,
+			);
+			name = MFCTime;
+			sourceTree = "<group>";
+		};
+		8B425B6B19083D23003679CE /* MostFrequentCharacter */ = {
+			isa = PBXGroup;
+			children = (
+				8B425B6619082E40003679CE /* YTMFCOperation.h */,
+				8B425B6719082E40003679CE /* YTMFCOperation.m */,
+				8B425B6919082E45003679CE /* MFCOptimalThreadCount */,
+				8B425B6A19082E53003679CE /* MFCTime */,
+			);
+			name = MostFrequentCharacter;
+			sourceTree = "<group>";
+		};
+		8B425B6F19084D37003679CE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		8B99F70219063D94002AF5FE /* Plot */ = {
+			isa = PBXGroup;
+			children = (
+				8B99F70319063DB0002AF5FE /* PlotItem.h */,
+				8B99F70419063DB0002AF5FE /* PlotItem.m */,
+				8B425B431907DED4003679CE /* RealTimePlot.h */,
+				8B425B441907DED4003679CE /* RealTimePlot.m */,
+				8B99F70919063EDE002AF5FE /* CorePlotLicense */,
+			);
+			name = Plot;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,9 +266,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B04EEF1190614C500E43B21 /* Build configuration list for PBXNativeTarget "MostFrequentCharacterDemo" */;
 			buildPhases = (
+				C75AA2C957E04012A8B6B8A2 /* Check Pods Manifest.lock */,
 				8B04EEB8190614C500E43B21 /* Sources */,
 				8B04EEB9190614C500E43B21 /* Frameworks */,
 				8B04EEBA190614C500E43B21 /* Resources */,
+				DDE209A1C934490980E38634 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,9 +344,10 @@
 				8B04EF011906185900E43B21 /* YTViewControllerIPad.xib in Resources */,
 				8B04EEDB190614C500E43B21 /* Images.xcassets in Resources */,
 				8B04EEF8190615F400E43B21 /* YTViewControllerIPhone.xib in Resources */,
-				8B3AF0491906231E008584A3 /* WindowIPad.xib in Resources */,
 				8B04EECA190614C500E43B21 /* InfoPlist.strings in Resources */,
 				8B3AF04B1906244D008584A3 /* WindowIPhone.xib in Resources */,
+				8B99F70A19063EDE002AF5FE /* CorePlotLicense in Resources */,
+				8B425B63190819D8003679CE /* WindowIPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,14 +361,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C75AA2C957E04012A8B6B8A2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DDE209A1C934490980E38634 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8B04EEB8190614C500E43B21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B04EED9190614C500E43B21 /* YTViewController.m in Sources */,
+				8B425B6E19083FCA003679CE /* YTMFCTimeOperation.m in Sources */,
+				8B04EED9190614C500E43B21 /* YTProfilerViewController.m in Sources */,
 				8B04EECC190614C500E43B21 /* main.m in Sources */,
 				8B04EED0190614C500E43B21 /* YTAppDelegate.m in Sources */,
+				8B99F70719063DB0002AF5FE /* PlotItem.m in Sources */,
+				8B425B6819082E40003679CE /* YTMFCOperation.m in Sources */,
+				8B425B451907DED4003679CE /* RealTimePlot.m in Sources */,
+				8B425B5E190804EE003679CE /* YTMFCOptmThrdCountOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +522,7 @@
 		};
 		8B04EEF2190614C500E43B21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52753F9BD37C487FB01ED33D /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					armv7s,
@@ -411,7 +539,7 @@
 					../,
 				);
 				INFOPLIST_FILE = "MostFrequentCharacterDemo/MostFrequentCharacterDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/developer/AppcodeProjects/MostFrequentCharacter/build/Release-iphoneos",
@@ -424,6 +552,7 @@
 		};
 		8B04EEF3190614C500E43B21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52753F9BD37C487FB01ED33D /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					armv7s,
@@ -440,7 +569,7 @@
 					../,
 				);
 				INFOPLIST_FILE = "MostFrequentCharacterDemo/MostFrequentCharacterDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/developer/AppcodeProjects/MostFrequentCharacter/build/Release-iphoneos",

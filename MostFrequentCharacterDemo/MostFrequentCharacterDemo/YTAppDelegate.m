@@ -7,7 +7,6 @@
 //
 
 #import "YTAppDelegate.h"
-
 @implementation YTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

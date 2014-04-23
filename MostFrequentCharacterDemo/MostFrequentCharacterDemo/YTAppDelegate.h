@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class YTMFCOptmThrdCountOperation;
 
 @interface YTAppDelegate : UIResponder <UIApplicationDelegate>
 
