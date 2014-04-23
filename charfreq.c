@@ -7,9 +7,10 @@
 //
 #include "charfreq.h"
 
-// todo: supress this warnings (dunno how)
 extern void most_freq_char_lock_mutex(void * mutex);
 extern void most_freq_char_unlock_mutex(void * mutex);
+
+static int most_freq_char_num_of_threads = 2;
 
 // scans part of char array and increments char counts in
 // common (for pthreads) array.
@@ -17,15 +18,15 @@ extern void most_freq_char_unlock_mutex(void * mutex);
 extern inline void *_most_freq_char_countChars(void* x)
 {
     // 1. Get args
-    CountCharsArgs_t *args = ((CountCharsArgs_t *) x);
-    CountRecord_t* restrict commonCountRecords = ((CountRecord_t *)args->commonCountArray);
-    char* restrict charSubArray = args->charSubArray;
+    CountCharsArgs_t* args = ((CountCharsArgs_t *) x);
+    CountRecord_t* commonCountRecords = ((CountRecord_t *)args->commonCountArray);
+    char* charSubArray = args->charSubArray;
     int charSubArrayLength = args->charSubArrayLength;
     
     // 2. Scan char array and increment count
     for (int i = 0; i < charSubArrayLength; i++) {
         char scannedChar = charSubArray[i];
-        CountRecord_t* record = commonCountRecords+scannedChar;
+        CountRecord_t* record = commonCountRecords+(scannedChar + 128); // chars start from -128
         most_freq_char_lock_mutex(&record->mutex);
         record->count++;
         most_freq_char_unlock_mutex(&record->mutex);
@@ -37,7 +38,12 @@ extern inline void *_most_freq_char_countChars(void* x)
 // todo: determine run tests to find optimal number of threads
 extern inline int _most_freq_char_optimizedNumThreads(int size)
 {
-    return size;
+    return 4;
+}
+
+void most_freq_char_set_thread_count(int thrdCount)
+{
+    most_freq_char_num_of_threads = thrdCount;
 }
 
 extern inline char _mostFrequentCharacter(char* str, int size);

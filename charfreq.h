@@ -16,22 +16,21 @@
 #define CHAR_COUNT 256 // total number of possible chars
 
 typedef unsigned int count_record_count_t;
-struct CountRecord {
+typedef struct CountRecord {
     unsigned int mutex;
     // given signature of mostFrequentCharacter fun accepts up to
     // int size of chars, uint is enough for this contract.
     count_record_count_t count;
-};
-typedef struct CountRecord CountRecord_t;
+} CountRecord_t __attribute__ ((aligned (16)));
 
 // arguments are passing through pthread method, wrap them in struct
-struct CountCharsArgs {
-    char* restrict charSubArray;
+typedef struct CountCharsArgs {
+    char* charSubArray;
     int charSubArrayLength;
-    int* restrict commonCountArray;
-};
-typedef struct CountCharsArgs CountCharsArgs_t;
+    CountRecord_t *commonCountArray;
+} CountCharsArgs_t;
 
+void most_freq_char_set_thread_count(int thrdCount);
 // todo: supress this warnings (dunno how)
 inline int _most_freq_char_optimizedNumThreads(int size);
 inline void *_most_freq_char_countChars(void* x);
@@ -61,7 +60,7 @@ inline char _mostFrequentCharacter(char* str, int size)
     //    from newly created pthreads below.
     CountCharsArgs_t args[numThreads];
     for (i = 0; i < numThreads; i++) {
-        args[i].commonCountArray = (int *)countRecords;
+        args[i].commonCountArray = countRecords;
     }
     //  3.1 Divide str to parts in order to process it in parallel
     const int blockSize = size / numThreads;
@@ -93,7 +92,7 @@ inline char _mostFrequentCharacter(char* str, int size)
     for (i = 0; i < CHAR_COUNT; i++) {
         if (countRecords[i].count > max) {
             max = countRecords[i].count;
-            result = i;
+            result = i - 128;
         }
     }
     
