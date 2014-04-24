@@ -31,7 +31,7 @@ typedef struct CountCharsArgs {
 } CountCharsArgs_t;
 
 void most_freq_char_set_thread_count(int thrdCount);
-// todo: supress this warnings (dunno how)
+// todo: supress this warnings (dunno how). This functions are defined in ARMMutex.s.
 inline int _most_freq_char_optimizedNumThreads(int size);
 inline void *_most_freq_char_countChars(void* x);
 
@@ -59,17 +59,18 @@ inline char _mostFrequentCharacter(char* str, int size)
         countRecords[i] = emptyRecord;
     }
     
-    // 2. Compute optimal number of threads for given str size FIXME
+    // 2. Compute optimal number of threads for given str size
     int numThreads = _most_freq_char_optimizedNumThreads(size);
     if (numThreads == 0) { numThreads = 1; }
     
-    // 3. Prepare arguments for countChars func, called
+    // 3. Prepare arguments for _most_freq_char_countChars func, called
     //    from newly created pthreads below.
     CountCharsArgs_t args[numThreads];
     for (i = 0; i < numThreads; i++) {
         args[i].commonCountArray = countRecords;
     }
-    //  3.1 Divide str to parts in order to process it in parallel
+    
+    //  3.1 Divide str to parts in order to process them in parallel
     const int blockSize = size / numThreads;
     for (i = 0; i < numThreads - 1; i++) {
         args[i].charSubArray = str + (i * blockSize);
@@ -86,7 +87,7 @@ inline char _mostFrequentCharacter(char* str, int size)
         pthread_create(&count_chars_threads[i], NULL, _most_freq_char_countChars, (void *) &args[i]);
     }
     
-    // 5. wait for threads to finish
+    // 5. wait threads to finish
     for (i = 0;i < numThreads; i++) {
         pthread_join(count_chars_threads[i], NULL);
     }

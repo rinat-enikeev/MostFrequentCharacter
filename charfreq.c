@@ -29,7 +29,7 @@ extern inline void *_most_freq_char_countChars(void* x)
         char scannedChar = charSubArray[i];
         CountRecord_t* record = commonCountRecords+(scannedChar + 128); // chars start from -128
         
-        // critical section
+        // critical section, lock count array element
         most_freq_char_lock_mutex(&record->mutex);
         record->count++;
         most_freq_char_unlock_mutex(&record->mutex);
@@ -44,6 +44,7 @@ extern inline int _most_freq_char_optimizedNumThreads(int size)
     return most_freq_char_num_of_threads;
 }
 
+// sets most_freq_char_num_of_threads for test purposes.
 void most_freq_char_set_thread_count(int thrdCount)
 {
     most_freq_char_num_of_threads = thrdCount;
