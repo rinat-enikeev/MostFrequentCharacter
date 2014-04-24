@@ -10,6 +10,7 @@
 extern void most_freq_char_lock_mutex(void * mutex);
 extern void most_freq_char_unlock_mutex(void * mutex);
 
+// as in task - 2 core ARM processor
 static int most_freq_char_num_of_threads = 2;
 
 // scans part of char array and increments char counts in
@@ -27,6 +28,8 @@ extern inline void *_most_freq_char_countChars(void* x)
     for (int i = 0; i < charSubArrayLength; i++) {
         char scannedChar = charSubArray[i];
         CountRecord_t* record = commonCountRecords+(scannedChar + 128); // chars start from -128
+        
+        // critical section
         most_freq_char_lock_mutex(&record->mutex);
         record->count++;
         most_freq_char_unlock_mutex(&record->mutex);

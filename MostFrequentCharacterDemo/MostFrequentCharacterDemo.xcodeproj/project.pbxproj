@@ -23,6 +23,7 @@
 		8B04EEF8190615F400E43B21 /* YTViewControllerIPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B04EEF7190615F400E43B21 /* YTViewControllerIPhone.xib */; };
 		8B04EF011906185900E43B21 /* YTViewControllerIPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B04EF001906185900E43B21 /* YTViewControllerIPad.xib */; };
 		8B04EF0319061A1700E43B21 /* libMostFrequentCharacter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B04EF0219061A1700E43B21 /* libMostFrequentCharacter.a */; };
+		8B0EAFBB190991ED00787FF4 /* YTOperationsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EAFBA190991ED00787FF4 /* YTOperationsProvider.m */; };
 		8B3AF04B1906244D008584A3 /* WindowIPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B3AF04A1906244D008584A3 /* WindowIPhone.xib */; };
 		8B425B451907DED4003679CE /* RealTimePlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B425B441907DED4003679CE /* RealTimePlot.m */; };
 		8B425B5E190804EE003679CE /* YTMFCOptmThrdCountOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B425B5D190804EE003679CE /* YTMFCOptmThrdCountOperation.m */; };
@@ -68,6 +69,8 @@
 		8B04EEF7190615F400E43B21 /* YTViewControllerIPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YTViewControllerIPhone.xib; sourceTree = "<group>"; };
 		8B04EF001906185900E43B21 /* YTViewControllerIPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YTViewControllerIPad.xib; sourceTree = "<group>"; };
 		8B04EF0219061A1700E43B21 /* libMostFrequentCharacter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMostFrequentCharacter.a; path = "../build/Release-iphoneos/libMostFrequentCharacter.a"; sourceTree = "<group>"; };
+		8B0EAFB9190991ED00787FF4 /* YTOperationsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTOperationsProvider.h; sourceTree = "<group>"; };
+		8B0EAFBA190991ED00787FF4 /* YTOperationsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTOperationsProvider.m; sourceTree = "<group>"; };
 		8B3AF04A1906244D008584A3 /* WindowIPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindowIPhone.xib; sourceTree = "<group>"; };
 		8B425B431907DED4003679CE /* RealTimePlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimePlot.h; sourceTree = "<group>"; };
 		8B425B441907DED4003679CE /* RealTimePlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTimePlot.m; sourceTree = "<group>"; };
@@ -150,7 +153,6 @@
 		8B04EEC5190614C500E43B21 /* MostFrequentCharacterDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8B425B6F19084D37003679CE /* Constants */,
 				8B425B5B1908043A003679CE /* Operations */,
 				8B99F70219063D94002AF5FE /* Plot */,
 				8B04EEF9190615FC00E43B21 /* Nibs */,
@@ -208,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				8B425B5F1908055C003679CE /* YTProfileOperation.h */,
+				8B0EAFB9190991ED00787FF4 /* YTOperationsProvider.h */,
+				8B0EAFBA190991ED00787FF4 /* YTOperationsProvider.m */,
 				8B425B6B19083D23003679CE /* MostFrequentCharacter */,
 			);
 			name = Operations;
@@ -240,13 +244,6 @@
 				8B425B6A19082E53003679CE /* MFCTime */,
 			);
 			name = MostFrequentCharacter;
-			sourceTree = "<group>";
-		};
-		8B425B6F19084D37003679CE /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Constants;
 			sourceTree = "<group>";
 		};
 		8B99F70219063D94002AF5FE /* Plot */ = {
@@ -404,6 +401,7 @@
 				8B425B6E19083FCA003679CE /* YTMFCTimeOperation.m in Sources */,
 				8B04EED9190614C500E43B21 /* YTProfilerViewController.m in Sources */,
 				8B04EECC190614C500E43B21 /* main.m in Sources */,
+				8B0EAFBB190991ED00787FF4 /* YTOperationsProvider.m in Sources */,
 				8B04EED0190614C500E43B21 /* YTAppDelegate.m in Sources */,
 				8B99F70719063DB0002AF5FE /* PlotItem.m in Sources */,
 				8B425B6819082E40003679CE /* YTMFCOperation.m in Sources */,

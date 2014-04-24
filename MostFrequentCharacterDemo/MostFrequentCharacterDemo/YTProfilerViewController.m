@@ -9,8 +9,7 @@
 #import "YTProfilerViewController.h"
 #import "RealTimePlot.h"
 #import "YTProfileOperation.h"
-#import "YTMFCOptmThrdCountOperation.h"
-#import "YTMFCTimeOperation.h"
+#import "YTOperationsProvider.h"
 
 static NSString* const kMinXUDKey = @"kUserDefaultsMinXYTProfilerViewController";
 static NSString* const kMaxXUDKey = @"kUserDefaultsMaxXYTProfilerViewController";
@@ -39,12 +38,8 @@ static NSString* const kXStepUDKey = @"kUserDefaultsXStepYTProfilerViewControlle
     self.digitsCharSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
     
     // 2. Init ops
-    NSObject<YTProfileOperation>* timeOp = [[YTMFCTimeOperation alloc] init];
-    [timeOp setDelay:0.2];
-    NSObject<YTProfileOperation>* mfcThreadsOp =  [[YTMFCOptmThrdCountOperation alloc] init];
-    [mfcThreadsOp setDelay:0.1];
-    [self addProfileOperations:@[mfcThreadsOp, timeOp]];
-    
+    YTOperationsProvider* opProvider = [[YTOperationsProvider alloc] init];
+    [self addProfileOperations:[opProvider allOperations]];
     [self.operationSelectButton setTitle:[_currentOp operationTitle] forState:UIControlStateNormal];
     [self.delayTV setText:[NSString stringWithFormat:@"%.01f", [_currentOp delay]]];
     
@@ -104,6 +99,8 @@ static NSString* const kXStepUDKey = @"kUserDefaultsXStepYTProfilerViewControlle
     [_plotView removeFromSuperview];
     self.plotView = newPlotView;
     [[self view] addSubview:_plotView];
+    UITapGestureRecognizer* looseTextFieldFocusGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignAllTextFields)];
+    [_plotView addGestureRecognizer:looseTextFieldFocusGR];
     
     [sender setEnabled:NO];
     
@@ -269,6 +266,9 @@ static NSString *delayPlaceHolderKey = @"delay";
 
 #pragma mark - UITextFieldDelegate
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self resignAllTextFields];
+}
+-(void)resignAllTextFields {
     for (UIView * txt in self.view.subviews){
         if ([txt isKindOfClass:[UITextField class]] && [txt isFirstResponder]) {
             [txt resignFirstResponder];
@@ -420,7 +420,8 @@ static CGRect _prevoiusFrameOfOwner;
     UILabel* tView = (UILabel*)view;
     if (!tView){
         tView = [[UILabel alloc] init];
-        [tView setTextColor:[UIColor colorWithRed:189.0/255.0 green:183.0/255.0 blue:107.0/255.0 alpha:1.0]];
+        UIColor* pickerTextColor = [UIColor colorWithRed:189.0/255.0 green:183.0/255.0 blue:107.0/255.0 alpha:1.0];
+        [tView setTextColor:pickerTextColor];
         [tView setText:[[_operations objectAtIndex:row] operationTitle]];
     }
     return tView;
