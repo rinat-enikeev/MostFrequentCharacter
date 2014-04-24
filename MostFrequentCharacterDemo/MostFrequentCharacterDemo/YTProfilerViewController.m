@@ -43,7 +43,7 @@ static NSString* const kXStepUDKey = @"kUserDefaultsXStepYTProfilerViewControlle
     [timeOp setDelay:0.2];
     NSObject<YTProfileOperation>* mfcThreadsOp =  [[YTMFCOptmThrdCountOperation alloc] init];
     [mfcThreadsOp setDelay:0.1];
-    [self addProfileOperations:@[timeOp, mfcThreadsOp]];
+    [self addProfileOperations:@[mfcThreadsOp, timeOp]];
     
     [self.operationSelectButton setTitle:[_currentOp operationTitle] forState:UIControlStateNormal];
     [self.delayTV setText:[NSString stringWithFormat:@"%.01f", [_currentOp delay]]];
