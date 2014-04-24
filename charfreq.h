@@ -35,9 +35,16 @@ void most_freq_char_set_thread_count(int thrdCount);
 inline int _most_freq_char_optimizedNumThreads(int size);
 inline void *_most_freq_char_countChars(void* x);
 
+
+// returns most frequent character in given char* str.
+// if there are several most frequent chars, returns one
+// with least value.
+// assumes that size is greater than zero
 inline char _mostFrequentCharacter(char* str, int size)
 {
     assert(size > 0); // this behavior is undefined in task
+    
+    if (size == 1) return *str;
     
     int i;
     

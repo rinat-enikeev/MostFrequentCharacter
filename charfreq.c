@@ -35,7 +35,7 @@ extern inline void *_most_freq_char_countChars(void* x)
     return NULL;
 }
 
-// todo: determine run tests to find optimal number of threads
+// may: add device specific values
 extern inline int _most_freq_char_optimizedNumThreads(int size)
 {
     return most_freq_char_num_of_threads;

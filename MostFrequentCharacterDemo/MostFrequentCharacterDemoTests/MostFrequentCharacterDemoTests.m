@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "charfreq.h"
 
 @interface MostFrequentCharacterDemoTests : XCTestCase
 
@@ -17,18 +18,26 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testDoubleAInAlphabet
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    char* testArr = "abcdefghijklmnopqrstuvwxyza";
+    u_long len = strlen(testArr);
+    XCTAssert(_mostFrequentCharacter(testArr, (int)len) == 'a');
 }
+
+- (void)testMostFrequentAtStartAndEnd
+{
+    char* testArr = "aaaaaaaabbbbbbcccfgjcdefgbbbbbbbbb";
+    u_long len = strlen(testArr);
+    XCTAssert(_mostFrequentCharacter(testArr, (int)len) == 'b');
+}
+
 
 @end

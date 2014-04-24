@@ -9,9 +9,9 @@
 #import "YTMFCOptmThrdCountOperation.h"
 #import "charfreq.h"
 
-static NSUInteger const DEFAULT_MIN_THREADS = 2;
-static NSUInteger const DEFAULT_MAX_THREADS = 20;
-static NSUInteger const DEFAULT_THREADS_STEP = 2;
+static NSUInteger const DEFAULT_MIN_THREADS = 1;
+static NSUInteger const DEFAULT_MAX_THREADS = 10;
+static NSUInteger const DEFAULT_THREADS_STEP = 1;
 
 static NSString* const kMinThreadsPropertyName = @"Min threads";
 static NSString* const kMaxThreadsPropertyName = @"Max threads";

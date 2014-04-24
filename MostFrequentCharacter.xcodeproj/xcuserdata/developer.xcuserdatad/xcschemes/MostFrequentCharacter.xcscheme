@@ -28,6 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8B911A24190988BC00FFE4ED"
+               BuildableName = "MostFrequentCharacterTests.xctest"
+               BlueprintName = "ef"
+               ReferencedContainer = "container:MostFrequentCharacter.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

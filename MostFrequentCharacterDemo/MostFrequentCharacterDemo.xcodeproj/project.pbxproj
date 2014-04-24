@@ -236,7 +236,6 @@
 			children = (
 				8B425B6619082E40003679CE /* YTMFCOperation.h */,
 				8B425B6719082E40003679CE /* YTMFCOperation.m */,
-				8B6F17AE1909541E004B138D /* MFCObjCOp */,
 				8B425B6919082E45003679CE /* MFCOptimalThreadCount */,
 				8B425B6A19082E53003679CE /* MFCTime */,
 			);
@@ -248,13 +247,6 @@
 			children = (
 			);
 			name = Constants;
-			sourceTree = "<group>";
-		};
-		8B6F17AE1909541E004B138D /* MFCObjCOp */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = MFCObjCOp;
 			sourceTree = "<group>";
 		};
 		8B99F70219063D94002AF5FE /* Plot */ = {
@@ -552,7 +544,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/developer/AppcodeProjects/MostFrequentCharacter/build/Release-iphoneos",
 					"$(PROJECT_DIR)/Pods/build/Release-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -584,7 +575,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/developer/AppcodeProjects/MostFrequentCharacter/build/Release-iphoneos",
 					"$(PROJECT_DIR)/Pods/build/Release-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -609,6 +599,11 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../,
+				);
 				INFOPLIST_FILE = "MostFrequentCharacterDemoTests/MostFrequentCharacterDemoTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -627,6 +622,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MostFrequentCharacterDemo/MostFrequentCharacterDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../,
+				);
 				INFOPLIST_FILE = "MostFrequentCharacterDemoTests/MostFrequentCharacterDemoTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
