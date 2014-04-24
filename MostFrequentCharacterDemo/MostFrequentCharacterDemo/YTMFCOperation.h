@@ -14,7 +14,7 @@
     char* _randomArr;
     int _randomArrSize;
 }
-@property (strong, nonatomic) NSDictionary * params;
+@property (strong, nonatomic) NSMutableDictionary * params;
 @property double delay;
 
 // refreshes car array with new random chars

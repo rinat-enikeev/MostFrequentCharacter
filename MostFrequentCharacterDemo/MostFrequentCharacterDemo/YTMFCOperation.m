@@ -8,7 +8,7 @@
 //
 
 #import "YTMFCOperation.h"
-static int const DEFAULT_CHAR_ARR_SIZE = 65536;
+static int const DEFAULT_CHAR_ARR_SIZE = 6553600;
 
 @implementation YTMFCOperation
 

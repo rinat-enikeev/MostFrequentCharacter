@@ -23,9 +23,9 @@ static NSString* const kThreadsStep = @"Threads step";
 {
     self = [super init];
     if (self) {
-        self.params = @{kMinThreadsPropertyName: @(DEFAULT_MIN_THREADS),
-                        kMaxThreadsPropertyName: @(DEFAULT_MAX_THREADS),
-                        kThreadsStep:            @(DEFAULT_THREADS_STEP)};
+        self.params = [NSMutableDictionary dictionaryWithDictionary:@{kMinThreadsPropertyName: @(DEFAULT_MIN_THREADS),
+                                                                      kMaxThreadsPropertyName: @(DEFAULT_MAX_THREADS),
+                                                                      kThreadsStep:            @(DEFAULT_THREADS_STEP)}];;
 
     }
     return self;

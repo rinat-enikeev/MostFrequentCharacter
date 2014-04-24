@@ -38,7 +38,7 @@ extern inline void *_most_freq_char_countChars(void* x)
 // todo: determine run tests to find optimal number of threads
 extern inline int _most_freq_char_optimizedNumThreads(int size)
 {
-    return 4;
+    return most_freq_char_num_of_threads;
 }
 
 void most_freq_char_set_thread_count(int thrdCount)

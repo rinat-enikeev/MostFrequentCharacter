@@ -10,7 +10,7 @@
 #import "charfreq.h"
 
 static NSUInteger DEFAULT_NUM_THREADS = 1;
-static NSString* const kNumThreadsPropertyName = @"kNumThreadsProperty";
+static NSString* const kNumThreadsPropertyName = @"Number of threads";
 
 @implementation YTMFCTimeOperation
 
@@ -18,7 +18,7 @@ static NSString* const kNumThreadsPropertyName = @"kNumThreadsProperty";
 {
     self = [super init];
     if (self) {
-        self.params = @{kNumThreadsPropertyName: @(DEFAULT_NUM_THREADS)};
+        self.params = [NSMutableDictionary dictionaryWithDictionary:@{kNumThreadsPropertyName: @(DEFAULT_NUM_THREADS)}];
         
     }
     return self;
@@ -43,7 +43,7 @@ static NSString* const kNumThreadsPropertyName = @"kNumThreadsProperty";
     clock_t start = clock();
     _mostFrequentCharacter(_randomArr, x);
     return (double)(clock() - start);
-
+    
 }
 
 @end

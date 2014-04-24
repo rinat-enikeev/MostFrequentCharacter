@@ -80,6 +80,7 @@
 		8B425B6719082E40003679CE /* YTMFCOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTMFCOperation.m; sourceTree = "<group>"; };
 		8B425B6C19083FCA003679CE /* YTMFCTimeOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTMFCTimeOperation.h; sourceTree = "<group>"; };
 		8B425B6D19083FCA003679CE /* YTMFCTimeOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTMFCTimeOperation.m; sourceTree = "<group>"; };
+		8B6F17AF19096199004B138D /* libPods-CorePlot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-CorePlot.a"; path = "Pods/build/Release-iphoneos/libPods-CorePlot.a"; sourceTree = "<group>"; };
 		8B99F70319063DB0002AF5FE /* PlotItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlotItem.h; sourceTree = "<group>"; };
 		8B99F70419063DB0002AF5FE /* PlotItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlotItem.m; sourceTree = "<group>"; };
 		8B99F70919063EDE002AF5FE /* CorePlotLicense */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CorePlotLicense; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		8B04EEBE190614C500E43B21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B6F17AF19096199004B138D /* libPods-CorePlot.a */,
 				8B425B6419082BC9003679CE /* QuartzCore.framework */,
 				8B04EF0219061A1700E43B21 /* libMostFrequentCharacter.a */,
 				8B04EEBF190614C500E43B21 /* Foundation.framework */,
@@ -234,6 +236,7 @@
 			children = (
 				8B425B6619082E40003679CE /* YTMFCOperation.h */,
 				8B425B6719082E40003679CE /* YTMFCOperation.m */,
+				8B6F17AE1909541E004B138D /* MFCObjCOp */,
 				8B425B6919082E45003679CE /* MFCOptimalThreadCount */,
 				8B425B6A19082E53003679CE /* MFCTime */,
 			);
@@ -245,6 +248,13 @@
 			children = (
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		8B6F17AE1909541E004B138D /* MFCObjCOp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MFCObjCOp;
 			sourceTree = "<group>";
 		};
 		8B99F70219063D94002AF5FE /* Plot */ = {
@@ -539,12 +549,14 @@
 					../,
 				);
 				INFOPLIST_FILE = "MostFrequentCharacterDemo/MostFrequentCharacterDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/developer/AppcodeProjects/MostFrequentCharacter/build/Release-iphoneos",
+					"$(PROJECT_DIR)/Pods/build/Release-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "239EF3FB-F4D6-4179-9B86-C2F50B321EB0";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -560,7 +572,7 @@
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rinat Enikeev (5V5EUT3ZXJ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MostFrequentCharacterDemo/MostFrequentCharacterDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -569,12 +581,14 @@
 					../,
 				);
 				INFOPLIST_FILE = "MostFrequentCharacterDemo/MostFrequentCharacterDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/developer/AppcodeProjects/MostFrequentCharacter/build/Release-iphoneos",
+					"$(PROJECT_DIR)/Pods/build/Release-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7F93AA56-D860-40C4-9B9E-89ECD53E0ACF";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};

@@ -69,10 +69,10 @@ static NSString *const kPlotIdentifier = @"Data Source Plot";
     [self setTitleDefaultsForGraph:graph withBounds:bounds];
     [self setPaddingDefaultsForGraph:graph withBounds:bounds];
 
-    graph.plotAreaFrame.paddingTop    = 15.0;
-    graph.plotAreaFrame.paddingRight  = 15.0;
-    graph.plotAreaFrame.paddingBottom = 80.0;
-    graph.plotAreaFrame.paddingLeft   = 80.0;
+    graph.plotAreaFrame.paddingTop    = 5.0;
+    graph.plotAreaFrame.paddingRight  = 5.0;
+    graph.plotAreaFrame.paddingBottom = 20.0;
+    graph.plotAreaFrame.paddingLeft   = 20.0;
     graph.plotAreaFrame.masksToBorder = NO;
 
     // Grid line styles
@@ -96,7 +96,7 @@ static NSString *const kPlotIdentifier = @"Data Source Plot";
     x.title                       = _xAxisText;
     x.titleOffset                 = 35.0;
     NSNumberFormatter *labelFormatter = [[NSNumberFormatter alloc] init];
-    labelFormatter.numberStyle = NSNumberFormatterNoStyle;
+    labelFormatter.numberStyle = NSNumberFormatterScientificStyle;
     x.labelFormatter           = labelFormatter;
 
     // Y axis
@@ -105,11 +105,12 @@ static NSString *const kPlotIdentifier = @"Data Source Plot";
     y.orthogonalCoordinateDecimal = CPTDecimalFromUnsignedInteger(0);
     y.majorGridLineStyle          = majorGridLineStyle;
     y.minorGridLineStyle          = minorGridLineStyle;
-    y.minorTicksPerInterval       = 5;
-    y.labelOffset                 = 5.0;
+    y.minorTicksPerInterval       = 4;
+    y.labelOffset                 = 2.0;
     y.title                       = _yAxisText;
     y.titleOffset                 = 30.0;
     y.axisConstraints             = [CPTConstraints constraintWithLowerOffset:0.0];
+    y.labelFormatter              = labelFormatter;
 
     // Rotate the labels by 45 degrees, just to show it can be done.
     x.labelRotation = M_PI_4;
