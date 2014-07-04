@@ -22,6 +22,7 @@ extern inline void *_most_freq_char_countChars(void* x)
     CountCharsArgs_t* args = ((CountCharsArgs_t *) x);
     CountRecord_t* commonCountRecords = ((CountRecord_t *)args->commonCountArray);
     char* charSubArray = args->charSubArray;
+    __builtin_prefetch(charSubArray);
     int charSubArrayLength = args->charSubArrayLength;
     
     // 2. Scan char array and increment count

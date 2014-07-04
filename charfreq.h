@@ -85,7 +85,8 @@ inline char _mostFrequentCharacter(char* str, int size)
         //  3.2.2 Divide str to parts in order to process them in parallel
         const int blockSize = size / numThreads;
         for (i = 0; i < numThreads - 1; i++) {
-            args[i].charSubArray = str + (i * blockSize);
+            char* charPosition = str + (i* blockSize);
+            args[i].charSubArray = charPosition;
             args[i].charSubArrayLength = blockSize;
         }
         int lastPartIndex = ((numThreads - 1) * blockSize);
