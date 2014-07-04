@@ -5,6 +5,6 @@ DEPENDENCIES:
   - CorePlot (~> 1.5)
 
 SPEC CHECKSUMS:
-  CorePlot: 7b55ddfce42eb93051c0f9edba927fd246831f6d
+  CorePlot: 4abaf1be82ff7d1220f4aed16996a93970ea5a0e
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.33.1

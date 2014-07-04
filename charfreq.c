@@ -45,6 +45,8 @@ extern inline int _most_freq_char_optimizedNumThreads(int size)
 }
 
 // sets most_freq_char_num_of_threads for test purposes.
+// num of cores by OSs can be found using
+// http://stackoverflow.com/questions/150355/programmatically-find-the-number-of-cores-on-a-machine
 void most_freq_char_set_thread_count(int thrdCount)
 {
     most_freq_char_num_of_threads = thrdCount;

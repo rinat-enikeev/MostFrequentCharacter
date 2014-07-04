@@ -18,7 +18,7 @@
 typedef unsigned int count_record_count_t;
 typedef struct CountRecord {
     unsigned int mutex;
-    // given signature of mostFrequentCharacter fun accepts up to
+    // given signature of mostFrequentCharacter funct accepts up to
     // int size of chars, uint is enough for this contract.
     count_record_count_t count;
 } CountRecord_t __attribute__ ((aligned (16)));
@@ -53,46 +53,66 @@ inline char _mostFrequentCharacter(char* str, int size)
     //    found in str, plus mutex.
     CountRecord_t countRecords[CHAR_COUNT];
     static const CountRecord_t emptyRecord;
-    //  todo: make "frostbyte" impl: write structs by
-    //        hand in order to avoid loop in bottleneck.
+    //  may: make "frostbyte" impl: write structs by
+    //        hand in order to avoid loop (bottleneck?)
     for (int i = 0; i < CHAR_COUNT; i++) {
         countRecords[i] = emptyRecord;
     }
     
     // 2. Compute optimal number of threads for given str size
     int numThreads = _most_freq_char_optimizedNumThreads(size);
-    if (numThreads == 0) { numThreads = 1; }
-    
-    // 3. Prepare arguments for _most_freq_char_countChars func, called
-    //    from newly created pthreads below.
-    CountCharsArgs_t args[numThreads];
-    for (i = 0; i < numThreads; i++) {
-        args[i].commonCountArray = countRecords;
+
+    // 3. Calc number of chars, storing count in countRecords[]
+    if (numThreads <= 1) {
+        
+        // 3.1 Prepare arguments for _most_freq_char_countChars func, called
+        //    from newly created pthreads below.
+        CountCharsArgs_t args;
+        args.commonCountArray = countRecords;
+        args.charSubArray = str;
+        args.charSubArrayLength = size;
+        _most_freq_char_countChars((void *) &args);
+        
+    } else {
+
+        // 3.2.1 Prepare arguments for _most_freq_char_countChars func, called
+        //    from newly created pthreads below.
+        CountCharsArgs_t args[numThreads];
+        for (i = 0; i < numThreads; i++) {
+            args[i].commonCountArray = countRecords;
+        }
+        
+        //  3.2.2 Divide str to parts in order to process them in parallel
+        const int blockSize = size / numThreads;
+        for (i = 0; i < numThreads - 1; i++) {
+            args[i].charSubArray = str + (i * blockSize);
+            args[i].charSubArrayLength = blockSize;
+        }
+        int lastPartIndex = ((numThreads - 1) * blockSize);
+        args[numThreads - 1].charSubArray = str + lastPartIndex;
+        args[numThreads - 1].charSubArrayLength = size - lastPartIndex;
+        
+        // 3.2.3 Run more threads to count chars.
+        //       -1 because of current thread.
+        pthread_t count_chars_threads[numThreads - 1];
+        for (i = 0; i < numThreads - 1; i++)
+        {
+            pthread_create(&count_chars_threads[i],
+                           NULL,
+                           _most_freq_char_countChars,
+                           (void *) &args[i]);
+        }
+        
+        // 3.2.4 Calc last chunk in current thread
+        _most_freq_char_countChars((void *) &args[numThreads - 1]);
+        
+        // 3.2.5 wait for threads to finish
+        for (i = 0;i < numThreads; i++) {
+            pthread_join(count_chars_threads[i], NULL);
+        }
     }
     
-    //  3.1 Divide str to parts in order to process them in parallel
-    const int blockSize = size / numThreads;
-    for (i = 0; i < numThreads - 1; i++) {
-        args[i].charSubArray = str + (i * blockSize);
-        args[i].charSubArrayLength = blockSize;
-    }
-    int lastPartIndex = ((numThreads - 1) * blockSize);
-    args[numThreads - 1].charSubArray = str + lastPartIndex;
-    args[numThreads - 1].charSubArrayLength = size - lastPartIndex;
-    
-    // 4. Run threads to count chars.
-    pthread_t count_chars_threads[numThreads];
-    for (i = 0; i < numThreads; i++)
-    {
-        pthread_create(&count_chars_threads[i], NULL, _most_freq_char_countChars, (void *) &args[i]);
-    }
-    
-    // 5. wait threads to finish
-    for (i = 0;i < numThreads; i++) {
-        pthread_join(count_chars_threads[i], NULL);
-    }
-    
-    // 6. Find maximum. Parallelizing search seems to
+    // 4. Find maximum. Parallelizing search seems to
     //    be not cost effective for 256 element array,
     //    so just lookup maximum value;
     char result = 0;

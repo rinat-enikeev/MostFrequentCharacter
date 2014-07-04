@@ -9,7 +9,7 @@
 #import "YTMFCTimeOperation.h"
 #import "charfreq.h"
 
-static NSUInteger DEFAULT_NUM_THREADS = 1;
+static NSUInteger DEFAULT_NUM_THREADS = 2;
 static NSString* const kNumThreadsPropertyName = @"Number of threads";
 
 @implementation YTMFCTimeOperation

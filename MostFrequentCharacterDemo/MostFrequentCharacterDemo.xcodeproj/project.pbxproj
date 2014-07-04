@@ -30,9 +30,9 @@
 		8B425B63190819D8003679CE /* WindowIPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B425B62190819D8003679CE /* WindowIPad.xib */; };
 		8B425B6819082E40003679CE /* YTMFCOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B425B6719082E40003679CE /* YTMFCOperation.m */; };
 		8B425B6E19083FCA003679CE /* YTMFCTimeOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B425B6D19083FCA003679CE /* YTMFCTimeOperation.m */; };
+		8B48E3FE19671A50003F1876 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B48E3FD19671A50003F1876 /* libPods.a */; };
 		8B99F70719063DB0002AF5FE /* PlotItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B99F70419063DB0002AF5FE /* PlotItem.m */; };
 		8B99F70A19063EDE002AF5FE /* CorePlotLicense in Resources */ = {isa = PBXBuildFile; fileRef = 8B99F70919063EDE002AF5FE /* CorePlotLicense */; };
-		D827492A422D4284B4EB1105 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A16E917F6EB4A6984F941DF /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +83,8 @@
 		8B425B6719082E40003679CE /* YTMFCOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTMFCOperation.m; sourceTree = "<group>"; };
 		8B425B6C19083FCA003679CE /* YTMFCTimeOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTMFCTimeOperation.h; sourceTree = "<group>"; };
 		8B425B6D19083FCA003679CE /* YTMFCTimeOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTMFCTimeOperation.m; sourceTree = "<group>"; };
+		8B48E3FB19671A35003F1876 /* libPods-CorePlot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-CorePlot.a"; path = "Pods/build/Debug-iphoneos/libPods-CorePlot.a"; sourceTree = "<group>"; };
+		8B48E3FD19671A50003F1876 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		8B6F17AF19096199004B138D /* libPods-CorePlot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-CorePlot.a"; path = "Pods/build/Release-iphoneos/libPods-CorePlot.a"; sourceTree = "<group>"; };
 		8B99F70319063DB0002AF5FE /* PlotItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlotItem.h; sourceTree = "<group>"; };
 		8B99F70419063DB0002AF5FE /* PlotItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlotItem.m; sourceTree = "<group>"; };
@@ -94,11 +96,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B48E3FE19671A50003F1876 /* libPods.a in Frameworks */,
 				8B04EF0319061A1700E43B21 /* libMostFrequentCharacter.a in Frameworks */,
 				8B04EEC2190614C500E43B21 /* CoreGraphics.framework in Frameworks */,
 				8B04EEC4190614C500E43B21 /* UIKit.framework in Frameworks */,
 				8B04EEC0190614C500E43B21 /* Foundation.framework in Frameworks */,
-				D827492A422D4284B4EB1105 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +140,8 @@
 		8B04EEBE190614C500E43B21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B48E3FD19671A50003F1876 /* libPods.a */,
+				8B48E3FB19671A35003F1876 /* libPods-CorePlot.a */,
 				8B6F17AF19096199004B138D /* libPods-CorePlot.a */,
 				8B425B6419082BC9003679CE /* QuartzCore.framework */,
 				8B04EF0219061A1700E43B21 /* libMostFrequentCharacter.a */,
@@ -524,10 +528,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52753F9BD37C487FB01ED33D /* Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					armv7s,
-					armv7,
-				);
+				ARCHS = armv7;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcons;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -543,10 +544,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Release-iphoneos",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
-				PRODUCT_NAME = "MFC Demo";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = MostFrequentCharacterDemo;
+				PROVISIONING_PROFILE = "E77F008F-8BCB-4E6C-97C8-CE9AEBA934BE";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -556,14 +557,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52753F9BD37C487FB01ED33D /* Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					armv7s,
-					armv7,
-				);
+				ARCHS = armv7;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcons;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rinat Enikeev (5V5EUT3ZXJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rinat Enikeev (5V5EUT3ZXJ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MostFrequentCharacterDemo/MostFrequentCharacterDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -575,10 +573,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Release-iphoneos",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
-				PRODUCT_NAME = "MFC Demo";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = MostFrequentCharacterDemo;
+				PROVISIONING_PROFILE = "DF5643F9-4268-41BA-9BE6-D8F52EEEB931";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};

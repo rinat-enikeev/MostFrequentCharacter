@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8B04EEBB190614C500E43B21"
-               BuildableName = "MostFrequentCharacterDemo.app"
+               BuildableName = "MFC Demo.app"
                BlueprintName = "MostFrequentCharacterDemo"
                ReferencedContainer = "container:MostFrequentCharacterDemo.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8B04EEBB190614C500E43B21"
-            BuildableName = "MostFrequentCharacterDemo.app"
+            BuildableName = "MFC Demo.app"
             BlueprintName = "MostFrequentCharacterDemo"
             ReferencedContainer = "container:MostFrequentCharacterDemo.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8B04EEBB190614C500E43B21"
-            BuildableName = "MostFrequentCharacterDemo.app"
+            BuildableName = "MFC Demo.app"
             BlueprintName = "MostFrequentCharacterDemo"
             ReferencedContainer = "container:MostFrequentCharacterDemo.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8B04EEBB190614C500E43B21"
-            BuildableName = "MostFrequentCharacterDemo.app"
+            BuildableName = "MFC Demo.app"
             BlueprintName = "MostFrequentCharacterDemo"
             ReferencedContainer = "container:MostFrequentCharacterDemo.xcodeproj">
          </BuildableReference>
