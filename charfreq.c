@@ -27,7 +27,8 @@ extern inline void *_most_freq_char_countChars(void* x)
     // 2. Scan char array and increment count
     for (int i = 0; i < charSubArrayLength; i++) {
         char scannedChar = charSubArray[i];
-        CountRecord_t* record = commonCountRecords+(scannedChar + 128); // chars start from -128
+        // chars start from -128
+        CountRecord_t* record = commonCountRecords+(scannedChar + 128);
         
         // critical section, lock count array element
         most_freq_char_lock_mutex(&record->mutex);
@@ -45,8 +46,6 @@ extern inline int _most_freq_char_optimizedNumThreads(int size)
 }
 
 // sets most_freq_char_num_of_threads for test purposes.
-// num of cores by OSs can be found using
-// http://stackoverflow.com/questions/150355/programmatically-find-the-number-of-cores-on-a-machine
 void most_freq_char_set_thread_count(int thrdCount)
 {
     most_freq_char_num_of_threads = thrdCount;

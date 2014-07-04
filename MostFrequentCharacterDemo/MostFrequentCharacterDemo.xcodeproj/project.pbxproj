@@ -48,7 +48,7 @@
 /* Begin PBXFileReference section */
 		4A16E917F6EB4A6984F941DF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		52753F9BD37C487FB01ED33D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		8B04EEBC190614C500E43B21 /* MFC Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MFC Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B04EEBC190614C500E43B21 /* MostFrequentCharacterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MostFrequentCharacterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B04EEBF190614C500E43B21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8B04EEC1190614C500E43B21 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8B04EEC3190614C500E43B21 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -131,7 +131,7 @@
 		8B04EEBD190614C500E43B21 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B04EEBC190614C500E43B21 /* MFC Demo.app */,
+				8B04EEBC190614C500E43B21 /* MostFrequentCharacterDemo.app */,
 				8B04EEE0190614C500E43B21 /* MostFrequentCharacterDemoTests.xctest */,
 			);
 			name = Products;
@@ -281,7 +281,7 @@
 			);
 			name = MostFrequentCharacterDemo;
 			productName = MostFrequentCharacterDemo;
-			productReference = 8B04EEBC190614C500E43B21 /* MFC Demo.app */;
+			productReference = 8B04EEBC190614C500E43B21 /* MostFrequentCharacterDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8B04EEDF190614C500E43B21 /* MostFrequentCharacterDemoTests */ = {
